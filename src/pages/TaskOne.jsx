@@ -7,7 +7,11 @@ import HighComponent from "../components/global/HighComponent";
 const TaskOne = ({ choosenSeats, renderRow, numOfRows }) => {
   return (
     <div className="container">
-      <Header title="Úloha 1" />
+      <div className="row">
+        <div className="col-12">
+          <Header title="Úloha 1" />
+        </div>
+      </div>
       <div className="row">
         <div className="col-8 mx-auto">
           <table className="table col-6 mx-auto">
@@ -20,4 +24,4 @@ const TaskOne = ({ choosenSeats, renderRow, numOfRows }) => {
   );
 };
 
-export default HighComponent(TaskOne);
+export default HighComponent(TaskOne, false);

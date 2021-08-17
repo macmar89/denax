@@ -1,16 +1,29 @@
 import { Switch, Route } from "react-router-dom";
-import "./App.css";
+import { createContext } from "react";
 
 //  pages
-import Home from "./pages/Home";
+import TaskOne from "./pages/TaskOne";
+import TaskTwo from "./pages/TaskTwo";
+import TaksThree from "./pages/TaskThree";
+import NavbarMenu from "./components/global/NavbarMenu";
+
+export const RowsContext = createContext(null);
+export const NumberOfSeats = createContext(null);
 
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/home" component={Home} />
-      </Switch>
+      <NumberOfSeats.Provider value={20}>
+        <RowsContext.Provider value={10}>
+          <NavbarMenu />
+          <Switch>
+            <Route path="/" component={TaskOne} exact />
+            <Route path="/one" component={TaskOne} exact />
+            <Route path="/two" component={TaskTwo} />
+            <Route path="/three" component={TaksThree} />
+          </Switch>
+        </RowsContext.Provider>
+      </NumberOfSeats.Provider>
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React from "react";
+
+//  components
 import CountOfChoosenSeats from "../components/global/CountOfChoosenSeats";
 import Header from "../components/global/Header";
-
 import HighComponent from "../components/global/HighComponent";
 
 const TaskOne = ({ choosenSeats, renderRow, numOfRows }) => {

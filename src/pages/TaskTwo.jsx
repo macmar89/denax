@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../components/global/Header";
 
+//  components
 import CountOfChoosenSeats from "../components/global/CountOfChoosenSeats";
-
+import Header from "../components/global/Header";
 import HighComponent from "../components/global/HighComponent";
 
 const TaskTwo = ({
@@ -20,7 +20,7 @@ const TaskTwo = ({
           <table className="table col-6 mx-auto">
             <thead>
               <tr>
-                <td>-</td>
+                <td> </td>
                 {numOfSeatsInRow.map(num => (
                   <th key={num} className="text-center">
                     {num}

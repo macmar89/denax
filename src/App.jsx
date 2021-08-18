@@ -12,7 +12,7 @@ export const NumberOfSeats = createContext(null);
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <NumberOfSeats.Provider value={20}>
         <RowsContext.Provider value={10}>
           <NavbarMenu />
